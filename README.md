@@ -2,6 +2,6 @@
 Aid means help :)
 Database - SQLite
 
-cryptobot --- t.me/CryptoAidBot
+cryptobot --- http://t.me/CryptoAidBot
 
-adminbot --- t.me/CryptoAidAdminBot
+adminbot --- http://t.me/CryptoAidAdminBot
