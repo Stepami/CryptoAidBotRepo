@@ -48,9 +48,9 @@ def setanalytics(message):
         else:
             cursor.execute("""
             UPDATE AdminTable
-            SET :curr_an_txt = :atext
+            SET {0}_an_txt = :atext
             WHERE id = 1
-            """, {"curr" : temp1, "atext" : temp2})
+            """.format(temp1), {"atext" : temp2})
             connection.commit()
             admin_bot.send_message(uid, "Вы успешно обновили аналитику!")
         connection.close()
