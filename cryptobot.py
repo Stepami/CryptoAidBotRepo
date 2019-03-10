@@ -65,7 +65,7 @@ def show_analytics(message):
         if temp == None:
             bot.send_message(uid, "Вы не выбрали криптовалюту")
         else:
-            cursor.execute("SELECT :curr_an_txt FROM AdminTable WHERE id = 1", {"curr" : temp})
+            cursor.execute("SELECT {0}_an_txt FROM AdminTable WHERE id = 1".format(temp))
             bot.send_message(uid, cursor.fetchone()[0])
         connection.close()
 
