@@ -131,8 +131,8 @@ def IsSubscribed(uid: int, db_connection: str):
         return((date.today() - date(int(temp.split("-")[0]), int(temp.split("-")[1]), int(temp.split("-")[2]))).days <= 30)
 
 def BuySubscription(uid: int):
-	bot.send_message(uid, "Ваша подписка истекла или вы её не приобретали.\nДля полчения доступа к функционалу бота необходимо купить подписку")
-	bot.send_invoice(uid, title = 'Подписка',
+    bot.send_message(uid, "Ваша подписка истекла или вы её не приобретали.\nДля полчения доступа к функционалу бота необходимо купить подписку")
+    bot.send_invoice(uid, title = 'Подписка',
                      description = '30-дневная подписка на бота',
                      provider_token = BotsConfig.provider_token,
                      currency = 'rub',
@@ -150,7 +150,7 @@ def checkout(pre_checkout_query):
 def got_payment(message):
     uid = message.chat.id
     subdate = str(date.today().year) + "-" + str(date.today().month) + "-" + str(date.today().day)
-    connection = sqlite3.connect(db_connection)
+    connection = sqlite3.connect(BotsConfig.db_connection)
     cursor = connection.cursor()
     cursor.execute("""
     UPDATE UserInfoTable
