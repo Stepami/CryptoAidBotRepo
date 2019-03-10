@@ -34,12 +34,12 @@ def setanalytics(message):
         cursor = connection.cursor()
         currencies = ["btc","bch","ltc","zec","sc"]
         try:
-            temp1 = message.text.split("\|/")[1]
+            temp1 = message.text.split(" \|/ ")[1]
         except IndexError:
             admin_bot.send_message(uid, "Вы не ввели валюту")
             return
         try:
-            temp2 = message.text.split("\|/")[2]
+            temp2 = message.text.split(" \|/ ")[2]
         except IndexError:
             admin_bot.send_message(uid, "Вы не ввели текст аналитики!")
             return
