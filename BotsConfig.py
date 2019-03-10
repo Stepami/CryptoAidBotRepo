@@ -24,7 +24,7 @@ help_size = len(help)
 admin_help = [
     "start - Запуск бота",
     "help - Список команд и их описание",
-    "setanalyt - Пример: /setanalyt\|/btc\|/example text"
+    "setanalyt - Пример: /setanalyt \|/ btc \|/ example text"
     "join - Подключение клиента к боту по его ID.Поместить ID необходимо через пробел. Пример: /join 228322420",
     "detach - Отключение клиента от бота по его ID.Поместить ID необходимо через пробел. Пример: /detach 228322420",
     "clientsinfo - Получение информации о клиентах"
